@@ -1,15 +1,67 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+body {
+  background-image: url("http://4chsni1gme302q23q54vwssn.wpengine.netdna-cdn.com/wp-content/uploads/2015/02/HAMA120351_zoom.jpg");
+  text-align: center;
+
+}
+
+h1 {
+  font-family: 'Yeseva One', cursive;
+  color: #CC2A76;
+  border: 1px solid teal;
+}
+
+h2 {
+  font-family: 'Yeseva One', cursive;
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+}
+
+.wrapper {
+  background-color: rgba(255, 255, 255, 0.75);
+  margin: 0 auto;
+  margin-top: 5%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  margin-bottom: 5%;
+}
+
+a {
+ text-decoration: none;
+}
+
+.glyphicons {
+  height: 20px;
+  width: 20px;
+}
+
+#flamingo {
+ position: absolute;
+ width: 100px;
+ height: 100px;
+ top: 10%;
+}
+
+#flamingo img {
+  width: 200px;
+  height: 200px;
+}
+
+.cocktail {
+  width: 10px;
+  height: 15px;
+}
+
+.footer {
+  margin-top: 5%;
+
+}
+
+.pink {
+    color: #CC2A76;
+}
+
+.teal {
+  color: teal;
+}

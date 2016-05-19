@@ -16,3 +16,22 @@ ParadiseIslandApp.controller("GoersController", ["$scope", "$http", "$timeout", 
     }, 1000);
   }
 }])
+
+
+// FLAMINGO
+// $(document).ready(function(){
+//   flyingFlamingos();
+// })
+//
+// function flyingFlamingos(){
+//   var $flamingo = $('#flamingo');
+//   var distance = 1200;
+//   setInterval(function(){
+//     $flamingo.css('left', distance + 'px');
+//     if (distance < -300) {
+//       distance = 1200;
+//     } else {
+//       distance -= 5;
+//     }
+//   }, 100);
+// };
