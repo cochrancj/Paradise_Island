@@ -1,0 +1,27 @@
+<div ng-controller="GoersController">
+
+<h1 id="heart" ng-show="heartToggle">&#10084</h1>
+<header class="header">
+  <div>
+    <h2>PARADISE ISLAND</h2>
+  </div>
+</header>
+
+<div class="container">
+  <ul class="users">
+    <span class="user" ng-repeat="goer in island_goers">
+      <img src="{{ goer.avatar }}" alt="Photo of {{ goer.name }}" />
+      <h4>{{ goer.name }}</h4>
+      <p>
+        {{ goer.address }}
+      </p>
+      <p>
+        {{ goer.email }}
+      </p>
+      <button ng-click="heartMe($index)" ng-class="goer.liked ? 'liked' : 'like' ">Like</button>
+    </span>
+  </ul>
+
+</div>
+
+</div>
