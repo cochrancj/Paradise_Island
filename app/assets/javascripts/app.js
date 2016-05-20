@@ -7,31 +7,39 @@ ParadiseIslandApp.controller("GoersController", ["$scope", "$http", "$timeout", 
     console.log("got some island goers");
   })
 
-  $scope.heartMe = function(id){
-    $scope.heartToggle = true;
+  $scope.newGuests = [];
 
-    $timeout( function(){
-        $scope.island_goers[id].liked = true;
-        $scope.heartToggle = false;
-    }, 1000);
-  }
+  $scope.addGuest = function(){
+    $scope.newGuests.push({
+      name: $scope.name,
+      post: $scope.post,
+      country: $scope.country,
+      email: $scope.email
+    });
+    $scope.name = '';
+    $scope.post = '';
+    $scope.country = '';
+    $scope.email = '';
+  };
+
+
 }])
 
 
 // FLAMINGO
-// $(document).ready(function(){
-//   flyingFlamingos();
-// })
-//
-// function flyingFlamingos(){
-//   var $flamingo = $('#flamingo');
-//   var distance = 1200;
-//   setInterval(function(){
-//     $flamingo.css('left', distance + 'px');
-//     if (distance < -300) {
-//       distance = 1200;
-//     } else {
-//       distance -= 5;
-//     }
-//   }, 100);
-// };
+$(document).ready(function(){
+  flyingFlamingos();
+})
+
+function flyingFlamingos(){
+  var $flamingo = $('#flamingo');
+  var distance = 1200;
+  setInterval(function(){
+    $flamingo.css('left', distance + 'px');
+    if (distance < -300) {
+      distance = 1200;
+    } else {
+      distance -= 5;
+    }
+  }, 100);
+};

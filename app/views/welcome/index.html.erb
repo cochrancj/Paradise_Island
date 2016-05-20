@@ -1,33 +1,57 @@
 <div ng-controller="GoersController">
-
-<h1 id="heart" ng-show="heartToggle">&#10084</h1>
-<header class="header">
-  <div>
-    <h1>PARADISE ISLAND</h1>
+  <div class="container">
+    <div class="row">
+      <table class="u-full-width">
+        <thead>
+          <tr>
+            <th>Avatar</th>
+            <th>Name</th>
+            <th>Postal Code</th>
+            <th>Country</th>
+            <th>Email</th>
+          </tr>
+        </thead>
+        <tbody class="user" ng-repeat="goer in island_goers">
+          <tr>
+            <td><img src="{{ goer.avatar }}" alt="Photo of {{ goer.name }}" /></td>
+            <td>{{ goer.name }}</td>
+            <td>{{ goer.postcode }}</td>
+            <td>{{ goer.country }}</td>
+            <td>{{ goer.email }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <hr class="teal-border">
+    <div class="row">
+      <h2>ADD GUESTS</h2>
+    </div>
+    <form ng-submit="addGuest()">
+      <div class="row">
+        <div class="six columns">
+          <label for="name">Name</label>
+          <input class="u-full-width" type="text" placeholder="your name" id="name" ng-model="name">
+        </div>
+        <div class="six columns">
+          <label for="post">Postal Code</label>
+          <input class="u-full-width" type="text" placeholder="postal code" id="post" ng-model="post">
+        </div>
+      </div>
+      <div class="row">
+        <div class="six columns">
+          <label for="country">Country</label>
+          <input class="u-full-width" type="text" placeholder="country" id="country" ng-model="country">
+        </div>
+        <div class="six columns">
+          <label for="email">Email Address</label>
+          <input class="u-full-width" type="email" placeholder="bender@paradise.com" id="email" ng-model="email">
+        </div>
+      </div>
+      <input class="button-primary" type="submit" value="Submit" ng-click="addGuest()">
+    </form>
   </div>
-</header>
-
-<div class="container">
-<h2>ISLAND GOERS </h2>
-
-  <ul class="users">
-    <span class="user" ng-repeat="goer in island_goers">
-      <img src="{{ goer.avatar }}" alt="Photo of {{ goer.name }}" />
-      <h4>{{ goer.name }}</h4>
-      <p>
-        {{ goer.address }}
-      </p>
-      <p>
-        {{ goer.email }}
-      </p>
-      <button ng-click="heartMe($index)" ng-class="goer.liked ? 'liked' : 'like' ">Like</button>
-    </span>
-  </ul>
-
 </div>
 
-</div>
-
-<!-- <div id="flamingo">
+<div id="flamingo">
   <img src="http://img06.deviantart.net/36b4/i/2014/266/8/0/flying_this_way_flamingo_pink_by_madetobeunique-d3ajyux.png" alt="flamingo"/>
-</div> -->
+</div>

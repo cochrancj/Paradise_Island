@@ -12,6 +12,7 @@ h1 {
 
 h2 {
   font-family: 'Yeseva One', cursive;
+  color: #45B0E6;
 }
 
 p {
@@ -25,15 +26,11 @@ p {
   padding-top: 5%;
   padding-bottom: 5%;
   margin-bottom: 5%;
+  width: 80%;
 }
 
 a {
  text-decoration: none;
-}
-
-.glyphicons {
-  height: 20px;
-  width: 20px;
 }
 
 #flamingo {
@@ -48,20 +45,34 @@ a {
   height: 200px;
 }
 
-.cocktail {
-  width: 10px;
-  height: 15px;
-}
-
 .footer {
   margin-top: 5%;
-
 }
 
 .pink {
-    color: #CC2A76;
+  color: #CC2A76;
 }
 
 .teal {
   color: teal;
+}
+
+td img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+td {
+  width: auto;
+}
+
+
+label {
+  text-align: left;
+  color: #CC2A76;
+}
+
+.teal-border {
+  border: 1px solid teal;
 }

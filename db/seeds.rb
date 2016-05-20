@@ -10,9 +10,10 @@
 
   IslandGoer.create({
     name:    Faker::Name.name,
-    address: Faker::Address.street_address,
+    postcode: Faker::Address.postcode,
+    country: Faker::Address.country,
     avatar:  Faker::Avatar.image,
     email:   Faker::Internet.email,
     })
-    
+
 end
