@@ -1,28 +1,22 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This project is a Rails and AngularJS based API application serving a database of guests that have stayed at Paradise Island. This API includes basic demographic information (home postal code and country), names, email addresses, and avatars. 
 
-Things you may want to cover:
+Additional Information:
 
-* Ruby version
+* Techonolgies Used
+  Ruby on Rails, Angular JS, jQuery, and a light end front-end framework (Skeleton). 
 
-* System dependencies
+* Screen Shots 
+  INSERT
 
-* Configuration
+* Wireframes
+  INSERT
 
-* Database creation
+* User Stories
+  As a supplier of world-class bushing lubricant, I want a list of guests that have recently stayed at Paradise Island, the galaxy's most popular resort among the animatronic. I want to be able to create geographically-based marketing campaigns based on general location, I want my marketing campaigns to be deliverable via email, and I want to personalize my communiques with the guest's name and avatar. I also really like Flamingos .... but only if they're drunk. Can you help me with that as well? 
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Unsolved Problems
+  I had half an idea for the consumer to be able to update this database with additonal guests on the fly as a value-added service in case the proprieter of Paradise Island ever needed to demonstrate adding a new user to his database without having to use a separate CMS, but ultimately decided that functionality would be better served by a separate application. 
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
