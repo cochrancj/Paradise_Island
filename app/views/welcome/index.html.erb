@@ -9,6 +9,7 @@
             <th>Postal Code</th>
             <th>Country</th>
             <th>Email</th>
+            <!-- <th>Delete</th> -->
           </tr>
         </thead>
         <tbody class="user" ng-repeat="goer in island_goers">
@@ -18,6 +19,7 @@
             <td>{{ goer.postcode }}</td>
             <td>{{ goer.country }}</td>
             <td>{{ goer.email }}</td>
+            <!-- <td><button ng-click="deleteGuest(goer.id)" name="button"></button></td> -->
           </tr>
         </tbody>
       </table>
@@ -47,7 +49,7 @@
           <input class="u-full-width" type="email" placeholder="bender@paradise.com" id="email" ng-model="email">
         </div>
       </div>
-      <input class="button-primary" type="submit" value="Submit" ng-click="addGuest()">
+      <input class="button-primary" type="submit" value="Submit">
     </form>
   </div>
 </div>

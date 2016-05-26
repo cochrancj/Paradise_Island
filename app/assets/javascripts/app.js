@@ -2,25 +2,51 @@ var ParadiseIslandApp = angular.module("Paradise-Island-App", []);
 
 ParadiseIslandApp.controller("GoersController", ["$scope", "$http", "$timeout", function($scope, $http, $timeout){
 
+  $scope.newGuests = {
+    name: "",
+    postcode: "",
+    country: "",
+    email: ""
+  };
+
   $http.get('/api/island_goers').then(function(response){
     $scope.island_goers = response.data.island_goers
-    console.log("got some island goers");
+    console.log("...heeeeeere on Gilligan's Island!");
   })
 
   $scope.newGuests = [];
 
   $scope.addGuest = function(){
-    $scope.newGuests.push({
-      name: $scope.name,
-      post: $scope.post,
-      country: $scope.country,
-      email: $scope.email
-    });
-    $scope.name = '';
-    $scope.post = '';
-    $scope.country = '';
-    $scope.email = '';
+    console.log("FORM SUBMITTED");
+
+    var db_guest = {
+      island_goer: {
+        name: $scope.name,
+        postcode: $scope.post,
+        country: $scope.country,
+        email: $scope.email
+      }
+    }
+
+    $http.post('/api/island_goers', db_guest).then(function(response){
+        // console.log(response.data.island_goer);
+        $scope.island_goers.push(response.data.island_goer);
+    })
+
+
+}
+
+
   };
+
+
+
+
+// delete strat
+  // $scope.deleteGuest = function(id) {
+  // $http.delete('/api/island_goers' + id)
+
+
 
 
 }])
