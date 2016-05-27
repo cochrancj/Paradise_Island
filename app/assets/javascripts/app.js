@@ -17,7 +17,7 @@ ParadiseIslandApp.controller("GoersController", ["$scope", "$http", "$timeout", 
   $scope.newGuests = [];
 
   $scope.addGuest = function(){
-    console.log("FORM SUBMITTED");
+    // console.log("FORM SUBMITTED");
 
     var db_guest = {
       island_goer: {
@@ -31,25 +31,23 @@ ParadiseIslandApp.controller("GoersController", ["$scope", "$http", "$timeout", 
     $http.post('/api/island_goers', db_guest).then(function(response){
         // console.log(response.data.island_goer);
         $scope.island_goers.push(response.data.island_goer);
-    })
+    });
+  }
 
+  $scope.deleteGuest = function(id) {
+    console.log("BYE, SUCKAH!");
 
-}
+    $http.delete('/api/island_goers/' + id);
 
-
+    // return $http.delete('/api/island_goers/' + id)
+      // .then(function(response){
+        // $scope.island_goers.delete(island_goers.data.all);
+        // $scope.island_goers.delete(response.data.island_goer);
+        // $scope.island_goers = response.data.island_goers
+    // });
   };
 
-
-
-
-// delete strat
-  // $scope.deleteGuest = function(id) {
-  // $http.delete('/api/island_goers' + id)
-
-
-
-
-}])
+}]); //ends big main function.
 
 
 // FLAMINGO
