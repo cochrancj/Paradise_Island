@@ -23,8 +23,7 @@ class Api::IslandGoersController < ApplicationController
 
   def destroy
     IslandGoer.delete params[:id]
-    # render json: { island_goers: Island.Goer.all }
-    respond_with IslandGoer.destroy(island_goer[:id])
+    render json: { island_goers: IslandGoer.all }
   end
 
   private

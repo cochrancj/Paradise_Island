@@ -31,20 +31,16 @@ ParadiseIslandApp.controller("GoersController", ["$scope", "$http", "$timeout", 
     $http.post('/api/island_goers', db_guest).then(function(response){
         // console.log(response.data.island_goer);
         $scope.island_goers.push(response.data.island_goer);
+        $scope.name = $scope.post = $scope.country = $scope.email = "";
     });
   }
 
   $scope.deleteGuest = function(id) {
     console.log("BYE, SUCKAH!");
 
-    $http.delete('/api/island_goers/' + id);
-
-    // return $http.delete('/api/island_goers/' + id)
-      // .then(function(response){
-        // $scope.island_goers.delete(island_goers.data.all);
-        // $scope.island_goers.delete(response.data.island_goer);
-        // $scope.island_goers = response.data.island_goers
-    // });
+    $http.delete('/api/island_goers/' + id).then(function(response){
+        $scope.island_goers = response.data.island_goers
+      })
   };
 
 }]); //ends big main function.
