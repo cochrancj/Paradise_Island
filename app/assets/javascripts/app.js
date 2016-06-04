@@ -11,7 +11,7 @@ ParadiseIslandApp.controller("GoersController", ["$scope", "$http", "$timeout", 
 
   $http.get('/api/island_goers').then(function(response){
     $scope.island_goers = response.data.island_goers
-    console.log("...heeeeeere on Gilligan's Island!");
+    // console.log("...heeeeeere on Gilligan's Island!");
   })
 
   $scope.newGuests = [];
@@ -36,7 +36,7 @@ ParadiseIslandApp.controller("GoersController", ["$scope", "$http", "$timeout", 
   }
 
   $scope.deleteGuest = function(id) {
-    console.log("BYE, SUCKAH!");
+    // console.log("BYE, SUCKAH!");
 
     $http.delete('/api/island_goers/' + id).then(function(response){
         $scope.island_goers = response.data.island_goers
